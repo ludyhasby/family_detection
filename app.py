@@ -13,7 +13,7 @@ model = load_model("model.h5")
 def predict(file_image, model, class_labels):
         if file_image.mode != "RGB":
             file_image = file_image.convert("RGB")
-        test_image = file_image.resize((150, 150))
+        test_image = file_image.resize((450, 300))
         test_image = img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis=0)
         test_image = test_image / 255.0  # Normalisasi
